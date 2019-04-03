@@ -1,0 +1,20 @@
+
+  
+  .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    width: 42%;
+    padding: 1.0rem 0.75rem;
+  }
+  
+  .tab-list-active {
+    background-color: white;
+    border: solid #ccc;
+    width: 43%;
+    text-align: center;
+    border-width: 1px 1px 0 1px;
+  }
+  .tab-list-not-active{
+    width: 40%;
+  }

@@ -3,52 +3,29 @@ import './App.css';
 import Form from './components/Form/Form.js';
 import firebase from 'firebase';
 import firebaseConfig from './config';
+
+
 firebase.initializeApp(firebaseConfig);
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null,
+      user: "",
     }
   }
-  componentDidMount() {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ user });
-    });
-  }
-  handleSignIn() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
-  }
-  handleLogOut() {
-    firebase.auth().signOut();
-  }
+ 
   render() {
     return (
       <div className="app">
-        <div className="app__header">
-          <h2>
-            SIMPLE APP WITH REACT
-          </h2>
-          { !this.state.user ? (
-            <button
-              className="app__button"
-              onClick={this.handleSignIn.bind(this)}
-            >
-              Sign in
-            </button>
-          ) : (
-            <button
-              className="app__button"
-              onClick={this.handleLogOut.bind(this)}
-            >
-              Logout
-            </button>
-          )}
+        <div className="app-header">
+        Status meeting standup
         </div>
-        <div className="app__list">
-          <Form user={this.state.user} />
+        <div className="app-list">
+        
+      <Form user={this.state.user} />      
+      
         </div>
+    
       </div>
     );
   }

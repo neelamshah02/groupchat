@@ -4,9 +4,9 @@ export default class Message extends Component {
   render() {
     return (
       <div className="message">
-                <span className="message__author">
-                    {this.props.message.userName}:
-                </span>
+                <div className="message__author">
+                    {this.props.message.userName}
+                </div>
         {this.props.message.message}
       </div>
     )

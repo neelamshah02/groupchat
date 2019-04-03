@@ -1,0 +1,9 @@
+.tabs{
+    background-color: white;
+    height : -webkit-fill-available;
+}
+.tab-list {
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    background-color: #f2f2f2
+  }
