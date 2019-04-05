@@ -10,3 +10,6 @@
     margin-right: 10px;
     color: rgba(0, 0, 0, 1);
 }
+.delete{
+    float: right;
+}

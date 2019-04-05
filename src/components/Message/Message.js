@@ -7,7 +7,8 @@ export default class Message extends Component {
                 <div className="message__author">
                     {this.props.message.userName}
                 </div>
-        {this.props.message.message}
+              
+        <div>{this.props.message.message} <span className="delete" name={this.props.message.userName} id={this.props.message.id} data-index={this.props.index} onClick={this.props.deleteMessage}>X</span></div>
       </div>
     )
   }

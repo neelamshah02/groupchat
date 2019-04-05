@@ -19,11 +19,11 @@ class Tab extends Component {
       props: {
         activeTab,
         label,
+        counts
       },
     } = this;
 
     let className = 'tab-list-item';
-
     if (activeTab === label) {
       className += ' tab-list-active';
     }
@@ -34,6 +34,8 @@ class Tab extends Component {
         onClick={onClick}
       >
         {label}
+        
+        {counts ? `(${counts})` : ""}
       </li>
     );
   }
